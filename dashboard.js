@@ -2,8 +2,8 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const { all, get, run } = require('../db');
-const { ensureAuth } = require('../middleware');
+const { all, get, run } = require('./db');        
+const { ensureAuth } = require('./middleware');    
 const router = express.Router();
 
 // Upload PDF pour rapports utilisateurs
