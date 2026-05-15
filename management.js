@@ -3,8 +3,8 @@ const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const { run, get } = require('../db');
-const { ensureRole } = require('../middleware');
+const { run, get } = require('./db');           // ✅
+const { ensureRole } = require('./middleware');
 const router = express.Router();
 
 const reportsUploadDir = path.join(__dirname, '..', 'public', 'uploads', 'reports');
