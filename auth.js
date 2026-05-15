@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
-const { get, run } = require('./db');  
+const { get, run } = require('./db');
+const router = express.Router();
 // ── LOGIN ──────────────────────────────────────────────
 router.get('/login', (req, res) => {
   res.render('auth/login', { title: 'Connexion', error: null });
