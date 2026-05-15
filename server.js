@@ -6,10 +6,9 @@ const path = require('path');
 const { initDb, run } = require('./db');
 const { injectUser } = require('./middleware');
 const publicRoutes = require('./public');
-const authRoutes = require('./routes/auth');
-const dashboardRoutes = require('./routes/dashboard');
-const managementRoutes = require('./routes/management');
-
+const authRoutes = require('./auth');
+const dashboardRoutes = require('./dashboard');
+const managementRoutes = require('./management');
 const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server);
