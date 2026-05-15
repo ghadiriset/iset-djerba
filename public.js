@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { all } = require('../db');
-
+const db = require('./db');
+const { all } = db;
 router.get('/', async (req, res) => {
   const companies = await all('SELECT * FROM companies ORDER BY id DESC LIMIT 3');
   const internships = await all(`SELECT internships.*, companies.name AS company_name
