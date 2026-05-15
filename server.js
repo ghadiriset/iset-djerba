@@ -5,8 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const { initDb, run } = require('./db');
 const { injectUser } = require('./middleware');
-
-const publicRoutes = require('./routes/public');
+const publicRoutes = require('./public'));
 const authRoutes = require('./routes/auth');
 const dashboardRoutes = require('./routes/dashboard');
 const managementRoutes = require('./routes/management');
